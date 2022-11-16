@@ -1,0 +1,31 @@
+
+    <div class="Add">
+        <input class="writeDown" type="text"[(ngModel)] = "list">
+        <button class="addButton" (click) = "clickAdd()">ADD NEW</button>
+    </div>
+    <div class="main">
+        <li *ngFor="let element of list1; let index = index">
+            <div class="main-element">
+                <div class="elements">
+                    <h1 class="element">{{element.element}}</h1>
+                    <h1 class="vacio" *ngIf="list1[index].element ===''">no value</h1>
+                </div>
+                <div class="counter">
+                    <div><button class="restar" (click)="restar(index)"><p>➖</p></button></div>
+                    <div><h1>{{element.cantidad}}</h1></div>
+                    <div><button class="sumar" (click)="sumar(index)"><p>✖️</p></button></div>
+
+                </div>
+                <div class="delete">
+                    <div><button class="eliminar" (click)="eliminar(index)"><p>❌</p></button></div>
+                </div>
+            </div>
+        </li>
+    </div>
+<div class="bottom">
+      <button class="random" (click)="mix()">START DEALING</button>
+      <div>
+        <h1 class="nexth1">{{list2[choose]}}</h1>
+        <button class="next" (click)="next()">NEXT</button>
+      </div>
+</div>

@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
+*{
+    list-style: none;
+    background-color: rgb(255, 202, 247);
+}
+@font-face {
+  font-family: "Sono";
+  src: local("Sono"), url(./assets/static/Sono/Sono-Medium.ttf) format("truetype");
+}
+html, button{
+  font-family: "Sono";
+
+}
